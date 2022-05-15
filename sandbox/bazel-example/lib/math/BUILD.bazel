@@ -1,0 +1,13 @@
+cc_library(
+	name = "sqaure",
+	srcs = [
+		"sqaure.cpp",
+	],
+	hdrs = [
+		"sqaure.h",
+	],
+	visibility = [
+		"//visibility:public",
+	],
+)
+

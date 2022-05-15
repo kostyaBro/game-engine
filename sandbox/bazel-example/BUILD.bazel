@@ -1,0 +1,10 @@
+cc_binary(
+	name = "hello_world",
+	srcs = [
+		"main.cpp",
+	],
+	deps = [
+		"//sandbox/bazel-example/lib/math:sqaure",
+	],
+)
+
