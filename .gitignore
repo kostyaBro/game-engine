@@ -1,0 +1,3 @@
+# Bazel's artifacts.
+/bazel-*
+
