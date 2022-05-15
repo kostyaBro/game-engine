@@ -4,7 +4,7 @@ cc_binary(
 		"main.cpp",
 	],
 	deps = [
-		"//sandbox/bazel-example/lib/math:sqaure",
+		"//sandbox/bazel-example/lib/math:square",
 	],
 )
 

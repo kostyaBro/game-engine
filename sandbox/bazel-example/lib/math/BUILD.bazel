@@ -1,13 +1,24 @@
 cc_library(
-	name = "sqaure",
-	srcs = [
-		"sqaure.cpp",
-	],
-	hdrs = [
-		"sqaure.h",
-	],
-	visibility = [
-		"//visibility:public",
-	],
+        name = "square",
+        srcs = [
+                "square.cpp",
+        ],
+        hdrs = [
+                "square.h",
+        ],
+        visibility = [
+                "//visibility:public",
+        ],
+)
+
+cc_test(
+        name = "square_test",
+        srcs = [
+                "square_test.cpp",
+        ],
+        deps = [
+                "//sandbox/bazel-example/lib/math:square",
+                "@googletest//:gtest_main",
+        ],
 )
 
