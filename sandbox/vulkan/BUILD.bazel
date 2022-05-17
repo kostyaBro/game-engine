@@ -1,0 +1,47 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary")
+
+config_setting (
+    name = "linux",
+    constraint_values = [
+        "@platforms//os:linux",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+config_setting (
+    name = "windows",
+    constraint_values = [
+        "@platforms//os:windows",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+config_setting (
+    name = "macos",
+    constraint_values = [
+        "@platforms//os:macos",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+cc_binary(
+    name = "vulkan_first_app",
+    srcs = [
+        "main.cpp",
+    ],
+    visibility = ["//visibility:public"],
+	deps = ["@rules_vulkan//vulkan:vulkan_cc_library"],
+#    linkopts = select({
+#        "//:linux": [
+#            "-lvulkan",
+#        ],
+#        "//:windows": [],
+#    }),
+#    deps = select({
+#        "//:windows": [
+#            "@vulkan_windows//:vulkan_cc_library",
+#        ],
+#        "//conditions:default": [],
+#    }),
+)
+
